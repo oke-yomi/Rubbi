@@ -542,3 +542,20 @@ section {
   color: var(--dark-color-light);
   text-align: center;
 }
+
+
+
+/* ====== FOR SHOP ====== */
+.shop_pages {
+  margin-top: var(--mb-6);
+}
+
+.page_num {
+  padding: .5rem 1rem;
+  border: 1px solid var(--dark-color);
+}
+
+.page_num:hover {
+  background-color: var(--dark-color);
+  color: var(--white);
+}
