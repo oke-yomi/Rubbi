@@ -2,7 +2,7 @@
 
 /* ===Variable css=== */
 :root {
-  --header-height: 3rem;
+  --header-height: 3.5rem;
 
   /* font weight */
   --font-light: 300;
@@ -13,8 +13,10 @@
   
   /* colors */
   --dark-color: #141414;
-  --dark-color-light: #8a8a8a;
-  --dark-color-lighten: #f2f2f2;
+  --dark-color-light: #6C6E74;
+  --dark-color-lighten: #EDEDED;
+  --yellow-color: #fcc838;
+  --pink-color: #FA0029;
   --white: #fff;
 
   /* font and typography */
@@ -38,7 +40,7 @@
   --z-fixed: 100;
 
   /* rotate img */
-  --rotate-img: rotate(-30deg);
+  /* --rotate-img: rotate(-30deg); */
 }
 
 @media screen and (min-width: 768px) {
@@ -93,6 +95,7 @@ img {
 /* === CSS Class === */
 .section {
   padding: 5rem 0 2rem;
+  border-bottom: 1px solid var(--dark-color-lighten);
 }
 
 .section-title {
@@ -160,9 +163,18 @@ img {
   margin-bottom: var(--mb-4);
 }
 
+.nav_link {
+  font-weight: var(--font-semi-bold);
+}
+
 .nav_logo {
+  font-size: var(--big-font-size);
   font-weight: var(--font-bold);
   text-transform: uppercase;
+}
+
+.nav_logo span {
+  color: var(--pink-color);
 }
 
 .nav_toggle, .nav_shop {
@@ -178,6 +190,7 @@ img {
 /* Active link (from Js) */
 .active {
   position: relative;
+  color: var(--pink-color);
 }
 
 .active::before {
@@ -197,10 +210,6 @@ img {
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
-section {
-  border-bottom: 1px solid var(--dark-color-light);
-}
-
 /* ==== HOME ==== */
 .home {
   background-color: var(--dark-color-lighten);
@@ -211,7 +220,7 @@ section {
   height: calc(100vh - var(--header-height));
 }
 
-.home_sneaker {
+.home_img-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
@@ -220,9 +229,10 @@ section {
 
 .home_shape {
   width: 220px;
-  height: 220px;
-  background-color: var(--dark-color);
+  height: 250px;
+  background-color: var(--dark-color-lighten);
   border-radius: 50%;
+  box-shadow: 4px 3px 10px 2px rgba(139, 84, 84, 0.75);
 }
 
 .home_img {
@@ -256,6 +266,10 @@ section {
   font-weight: var(--font-medium);
   border-radius: .5rem;
   transition: .3s;
+}
+
+.home_btn {
+  background-color: var(--pink-color);
 }
 
 .button:hover {
@@ -547,6 +561,10 @@ section {
 
 /* ==== MEDIA QUERIES ==== */
 @media screen and (min-width: 576px) {
+  .nav_logo {
+    font-size: var(--big-font-size);
+  }
+
   .collection_container {
     grid-template-columns: 415px;
   }
@@ -580,7 +598,7 @@ section {
   }
 
   .nav {
-    height: calc(var(--header-height) + 1.5rem);
+    height: calc(var(--header-height) + 1rem);
   }
   .nav_menu {
     margin-left: auto;
@@ -613,7 +631,7 @@ section {
     width: 470px;
     top: 3.5rem;
     right: 0;
-    left: -3rem;
+    /* left: -1rem; */
   }
 
   .newsletter_container {
@@ -659,6 +677,8 @@ section {
     margin-bottom: var(--mb-6);
   }
 }
+
+
 
 
 /* ====== FOR SHOP ====== */
