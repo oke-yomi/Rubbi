@@ -464,30 +464,6 @@ img {
   row-gap: 2rem;
 }
 
-.new_mens {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--dark-color-lighten);
-  border-radius: .5rem;
-  padding: 2rem;
-}
-
-.new_mens-img {
-  width: 276px;
-  margin-bottom: var(--mb-3);
-}
-
-.new_title {
-  font-size: var(--bigger-font-size);
-  margin-bottom: .25rem;
-}
-
-.new_preci {
-  display: block;
-  margin-bottom: var(--mb-3);
-}
-
 .new_sale {
   display: grid;
   gap: 1.5rem;
@@ -496,16 +472,11 @@ img {
 
 .new_sale-card {
   position: relative;
-  padding: 3.5rem 1.5rem;
   background-color: var(--dark-color-lighten);
   border-radius: .5rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
-}
-
-.new_sale-img {
-  width: 220px;
 }
 
 .new_sale-overlay {
@@ -515,14 +486,25 @@ img {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(138,138,138,.3);
+  background-color: rgba(138,138,138,.8);
   transition: .3s;
 }
 
 .new_sale-card:hover .new_sale-overlay {
   bottom: 0;
+}
+
+.overlay_text {
+  color: var(--white);
+  font-size: var(--biggest-font-size);
+  margin-bottom: var(--mb-4);
+}
+
+.new_btn {
+  margin: 0 auto;
 }
 
 /* ==== Newsletter ==== */
@@ -616,10 +598,6 @@ img {
   .offer_data {
     text-align: center;
   }
-
-  .new_mens {
-    align-items: center;
-  }
 }
 
 
@@ -672,6 +650,14 @@ img {
     /* left: -1rem; */
   }
 
+  .overlay_text {
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-1);
+  }
+  .new_btn {
+    margin: 0 auto;
+  }
+
   .newsletter_container {
     grid-template-columns: max-content max-content;
     justify-content: center;
@@ -701,18 +687,6 @@ img {
 
   .collection_container {
     grid-template-columns: repeat(2, 415px);
-  }
-
-  .new_container {
-    grid-template-columns: max-content 1fr;
-  }
-  .new_mens {
-    align-items: initial;
-    justify-content: flex-end;
-    padding: 4rem 2rem;
-  }
-  .new_mens-img {
-    margin-bottom: var(--mb-6);
   }
 }
 
